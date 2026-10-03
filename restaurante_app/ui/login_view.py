@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 from ui.main_view import MainView
+from pathlib import Path
+from PIL import Image, ImageTk
 
 class LoginView(tk.Tk):
     def __init__(self, servicio):
@@ -8,18 +10,33 @@ class LoginView(tk.Tk):
         self.servicio = servicio
 
         self.title("Acceso al Sistema - Restaurante")
-        self.geometry("380x300")
+        self.geometry("500x500")
         self.resizable(False, False)
         self.config(bg="#f4f6f7")
+
+        self.logo_login = None 
+        self._cargar_logo()
 
         self._crear_interfaz()
 
     def _crear_interfaz(self):
+        if self.logo_login:
+            lbl_logo = tk.Label(self, image=self.logo_login, bg="#f4f6f7")
+            lbl_logo.pack(pady=(15, 5))
+
         lbl_titulo = tk.Label(
-            self, text="INICIAR SESIÓN", font=("Arial", 14, "bold"), 
+            self, text="SISTEMA DE RESTAURANTE", 
+            font=("Arial", 14, "bold"), 
             bg="#f4f6f7", fg="#2c3e50"
         )
-        lbl_titulo.pack(pady=15)
+        lbl_titulo.pack(pady=(0, 2))
+
+        lbl_sub = tk.Label(
+            self, text="Ingrese sus credenciales para continuar", 
+            font=("Arial", 9), 
+            bg="#f4f6f7", fg="#7f8c8d"
+        )
+        lbl_sub.pack(pady=(0, 15))
 
         frm_campos = tk.Frame(self, bg="#f4f6f7")
         frm_campos.pack(pady=10)
@@ -53,3 +70,19 @@ class LoginView(tk.Tk):
             app_principal.mainloop()
         else:
             messagebox.showerror("Error de Acceso", "Credenciales incorrectas.")
+
+    def _cargar_logo(self):
+        try:
+            base_dir = Path(__file__).resolve().parent.parent
+            assets_dir = base_dir / "assets"
+            ruta_logo = assets_dir / "Sabor_de_casa.png"
+
+            if ruta_logo.exists():
+                img = Image.open(ruta_logo).resize((120, 120), Image.Resampling.LANCZOS)
+                self.logo_login = ImageTk.PhotoImage(img) 
+                print("¡Logo cargado correctamente en LoginView como self.logo_login!")
+            else:
+                self.logo_login = None
+        except Exception as e:
+            print(f"Error al cargar logo en Login: {e}")
+            self.logo_login = None

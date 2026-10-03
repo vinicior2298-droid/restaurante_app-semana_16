@@ -1,22 +1,14 @@
 [
     {
-        "usuario_id": "0302895354",
-        "producto_codigo": "L002",
-        "cantidad": "3"
+        "id_usuario": "0969083461",
+        "id_producto": "L004",
+        "cantidad": 1,
+        "total": 1.5
     },
     {
-        "usuario_id": "0107105884",
-        "producto_codigo": "L001",
-        "cantidad": "2"
-    },
-    {
-        "usuario_id": "0309876523",
-        "producto_codigo": "L003",
-        "cantidad": "3"
-    },
-    {
-        "usuario_id": "0107105884",
-        "producto_codigo": "L002",
-        "cantidad": "1"
+        "id_usuario": "0995211351",
+        "id_producto": "L005",
+        "cantidad": 1,
+        "total": 3.5
     }
 ]

@@ -1,0 +1,9 @@
+[
+    {
+        "identificacion": "1",
+        "nombre": "Admin Principal",
+        "username": "admin",
+        "contraseña": "Admin1234",
+        "rol": "Administrador"
+    }
+]

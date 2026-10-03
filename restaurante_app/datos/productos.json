@@ -11,7 +11,7 @@
         "nombre": "Encebollado",
         "categoria": "Comida Típica",
         "precio": 4.5,
-        "stock": 7
+        "stock": 3
     },
     {
         "codigo": "L003",
@@ -19,5 +19,19 @@
         "categoria": "Jugos",
         "precio": 1.5,
         "stock": 7
+    },
+    {
+        "codigo": "L004",
+        "nombre": "Yogurt Griego Con Maracuyá",
+        "categoria": "Postres",
+        "precio": 1.5,
+        "stock": 0
+    },
+    {
+        "codigo": "L005",
+        "nombre": "Coctel De Camarones",
+        "categoria": "Entradas",
+        "precio": 3.5,
+        "stock": 6
     }
 ]

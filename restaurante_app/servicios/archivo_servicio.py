@@ -28,11 +28,7 @@ class ArchivoServicio:
       usuarios = []
       for registro in datos:
         try:
-          usuario = Usuario(
-              registro["identificacion"],
-              registro["nombre"],
-              registro["contraseña"],
-          )
+          usuario = Usuario.from_dict(registro)
           usuarios.append(usuario)
         except (KeyError, ValueError):
           continue
@@ -77,7 +73,7 @@ class ArchivoServicio:
       for reg in datos:
         try:
           v = Venta(
-              reg["usuario_id"], reg["producto_codigo"], int(reg["cantidad"])
+              reg["id_usuario"], reg["id_producto"], int(reg["cantidad"])
           )
           ventas.append(v)
         except (KeyError, ValueError):

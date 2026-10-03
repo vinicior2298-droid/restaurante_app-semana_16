@@ -1,12 +1,44 @@
 [
     {
+        "identificacion": "1",
+        "nombre": "Admin Principal",
+        "username": "admin",
+        "contraseña": "Admin1234",
+        "rol": "Administrador"
+    },
+    {
         "identificacion": "0302895354",
         "nombre": "Richard Morocho",
-        "contraseña": "Roswell98"
+        "username": "richard",
+        "contraseña": "Roswell98",
+        "rol": "Empleado"
     },
     {
         "identificacion": "0107105884",
         "nombre": "Ruth Marca",
-        "contraseña": "Ruthmar9"
+        "username": "ruth",
+        "contraseña": "Ruthmar9",
+        "rol": "Empleado"
+    },
+    {
+        "identificacion": "0304567898",
+        "nombre": "Maribel Chávez",
+        "username": "maribel",
+        "contraseña": "1234",
+        "rol": "Empleado"
+    },
+    {
+        "identificacion": "0969083461",
+        "nombre": "Gabriela Flores",
+        "username": "gabriela",
+        "contraseña": "0987",
+        "rol": "Cliente"
+    },
+    {
+        "identificacion": "0995211351",
+        "nombre": "Guillermo Torres",
+        "username": "guillermo",
+        "contraseña": "567",
+        "rol": "Cliente"
     }
 ]
